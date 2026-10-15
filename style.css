@@ -1,0 +1,793 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: Coolvetica;
+    color: #fff;
+    background: #121212;
+    background-image: url(img/BG.png);
+    background-size: cover;
+    background-position: center;
+    scroll-behavior: smooth;
+    overflow: hidden auto;
+}
+
+/* PAGINA PRINCIPALA */
+
+section {
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    top: 96px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+nav > a {
+    color: rgba(255, 255, 255, 0.33);
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: Bodoni Moda;
+    transition: .232323s ease-in-out;
+    background: rgba(18, 18, 18, 0.8);
+    border-radius: 20px;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+}
+nav > a.active,
+nav > a:hover {
+    color: #FFF;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 1112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .draperii {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
+header .draperii.s {
+    left: 0;
+}
+header .draperii.d {
+    right: 0;
+}
+header > .titlu {
+    position: absolute;
+    top: 161px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+header > h2 {
+    color: transparent;
+    text-shadow: 0 1px 26.7px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #A8ACA9;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Indie Flower', cursive;
+    position: absolute;
+    top: 512px;
+}
+header > p {
+    position: absolute;
+    top: 693px;
+    color: #FFF;
+    text-align: center;
+    font-size: 90px;
+    font-weight: 400;
+    font-family: 'Indie Flower', cursive;
+}
+header > .countdown {
+    position: absolute;
+    top: 863px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+header > .countdown > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header > .countdown > div > div {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: rgba(18, 18, 18, 0.80);
+    color: #FFF;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 400;
+    font-family: 'Indie Flower', cursive;
+}
+header > .countdown > div > span {
+    margin-left: 20px;
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Indie Flower', cursive;
+    background: linear-gradient(to right, #DFC87A 0%, #594415 50%, #E0AA29 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.separator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 27px;
+    background-image: url(img/SEPARATOR.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section#echipe {
+    position: relative;
+    min-height: 1988px;
+    background-image: url(img/ECHIPE.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    padding-top: 90px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#echipe > h1 {
+    width: 1320px;
+    color: #FFF;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Bodoni Moda;
+}
+section#echipe > p {
+    margin-top: 5px;
+    width: 1320px;
+    color: rgba(255, 255, 255, 0.90);
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Indie Flower', cursive;
+    line-height: 1.2;
+}
+section#echipe > p > span {
+    display: block;
+    color: #E0AA29;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+}
+section#echipe .grid-echipe {
+    margin-top: 36px;
+    width: 1320px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 60px 60px;
+}
+section#echipe .grid-echipe > img {
+    position: relative;
+    cursor: pointer;
+    transition: .232323s ease-in-out;
+    border: 2px solid transparent;
+}
+section#echipe .grid-echipe > img:hover {
+    filter: grayscale(1.0);
+    transform: scale(1.1) rotate(-5deg);
+}
+
+section#sponsori {
+    min-height: 600px;
+    background-image: url(img/SPONSORI.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    padding-top: 90px;
+    padding-bottom: 106px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#sponsori > h1 {
+    width: 1320px;
+    color: #FFF;
+    font-family: Coolvetica;
+    font-size: 100px;
+    font-style: italic;
+    font-weight: 400;
+}
+section#sponsori > p {
+    width: 1316px;
+    color: #FFF;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+section#sponsori .grid-sponsori {
+    width: 1316px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    grid-gap: 40px;
+}
+
+section#bilete {
+    height: 550px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(img/BILETE.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+section#bilete > h1 {
+    width: 916px;
+    color: #FFF;
+    font-size: 60px;
+    font-family: Bodoni Moda;
+    font-weight: bold;
+}
+section#bilete > p {
+    width: 910px;
+    text-align: left;
+    margin-top: 10px;
+    color: #FFF;
+    font-size: 45px;
+    font-weight: 400;
+    font-family: 'Indie Flower', cursive;
+    line-height: 1.2;
+}
+
+section#tombola {
+    height: 520px;
+    padding-top: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #A8ACA9;
+    background-image: url(img/TOMBOLA.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+section#tombola > h1 {
+    width: 1316px;
+    color: #FFF;
+    font-size: 100px;
+    font-style: italic;
+    font-weight: 400;
+}
+section#tombola > p {
+    width: 1316px;
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #DFC87A 0%, #AF953C 50%, #E0AA29 100%);
+}
+footer > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #121212;
+    font-size: 20px;
+    text-align: center;
+    font-family: Bodoni Moda;
+    width: 500%;
+    user-select: none;
+    letter-spacing: 8px;
+}
+
+/* INDIVIDUAL */
+
+.individual {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.individual > section {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+}
+
+.individual > section > img {
+    position: absolute;
+}
+
+section#baiat {
+    background-image: url(img/INDIVIDUAL_STANGA.png);
+}
+section#fata {
+    background-image: url(img/INDIVIDUAL_DREAPTA.png);
+}
+
+section#baiat > img {
+    bottom: 0;
+    left: 0;
+}
+section#fata > img {
+    bottom: 0;
+    right: 0;
+}
+
+.individual section .despre-participant {
+    position: absolute;
+}
+section#baiat .despre-participant {
+    left: 742px;
+}
+section#fata .despre-participant {
+    left: 124px;
+}
+
+.individual section .despre-participant > h1 {
+    color: #800020;
+    text-shadow: 0 4px 26px rgba(128, 0, 32, 0.25);
+    font-size: 120px;
+    font-style: italic;
+    font-weight: 400;
+}
+.individual section .despre-participant > p {
+    width: 1110px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: normal;
+}
+.individual section .despre-participant > p > span {
+    color: rgba(255, 255, 255, 0.66);
+}
+
+
+/* VOTARE */
+
+.votare {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1999;
+}
+
+.votare header {
+    padding-top: 187px;
+}
+.votare header > h1 {
+    font-size: 120px;
+}
+.votare header > p {
+    font-size: 20px;
+}
+.votare .redirecturi {
+    margin-top: 40px;
+    margin-left: 50px;
+    display: flex;
+}
+.votare .redirecturi div {
+    position: relative;
+    width: 435px;
+    height: 405px;
+    display: grid;
+    place-items: center;
+    transition: .1s ease-in-out;
+}
+.votare .redirecturi div:hover {
+    transform: scale(1.1);
+}
+.votare .redirecturi div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/mrpop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.votare .redirecturi a:last-of-type div::before {
+    background-image: url(img/misspop.png);
+    top: -26px;
+}
+
+
+/* ****** RESPONSIVE ****** */
+
+
+/* s */
+@media (max-width: 767px) {
+    body {
+        background-attachment: fixed;
+    }
+    
+    nav {
+        top: 56px;
+        width: 300px;
+        gap: 10px;
+    }
+    nav > a {
+        font-size: 16px;
+    }
+
+    header {
+        height: 500px;
+    }
+    header .titlu {
+        width: 70%;
+    }
+    header .draperii {
+        width: 30%;
+    }
+    header > h2 {
+        top: 280px;
+        font-size: 16px;
+        -webkit-text-stroke-width: 0.3px;
+    }
+    header > p {
+        top: 320px;
+        font-size: 26px;
+    }
+    header > .countdown {
+        top: 380px;
+        gap: 10px;
+    }
+    header > .countdown > div {
+        gap: 5px;
+    }
+    header > .countdown > div > div {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    header > .countdown > div > span {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    header > span {
+        font-size: 16px;
+    }
+    
+    section#echipe {
+        padding-top: 30px;
+    }
+    section#echipe h1 {
+        width: fit-content;
+        font-size: 38px;
+        width: 360px;
+    }
+    section#echipe > p {
+        width: 360px;
+        font-size: 14px;
+    }
+    section#echipe > p > span {
+        font-size: 14px;
+    }
+    section#echipe {
+        min-height: 2225px;
+        background-size: contain;
+        object-fit: contain;
+    }
+    section#echipe .grid-echipe {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section#echipe .grid-echipe > img {
+        width: 360px;
+    }
+    
+    section#sponsori > h1 {
+        width: 360px;
+        font-size: 38px;
+    }
+    section#sponsori > p {
+        width: 356px;
+        font-size: 16px;
+    }
+    section#sponsori .grid-sponsori {
+        width: 356px;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 30px;
+    }
+    section#sponsori .grid-sponsori > img {
+        max-height: 60px;
+    }
+
+    section#bilete {
+        height: 300px;
+        background-size: cover;
+        background-position: bottom 0% left 80%;
+    }
+    section#bilete > h1 {
+        width: 360px;
+        font-size: 38px;
+    }
+    section#bilete > p {
+        width: 356px;
+        font-size: 16px;
+    }
+
+    section#tombola {
+        padding-top: 82px;
+        height: 300px;
+        background-size: cover;
+        background-position: bottom 0% left 78%;
+    }
+    section#tombola > h1 {
+        width: 360px;
+        font-size: 38px;
+    }
+    section#tombola > p {
+        width: 356px;
+        font-size: 16px;
+    }
+
+    .individual > section {
+        position: relative;
+        width: 100%;
+        height: 800px;
+        background-size: 100% 100%;
+    }
+    .individual > section#fata {
+        height: 550px;
+    }
+    .individual section .despre-participant {
+        top: 200px;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        flex-direction: column;
+    }
+    .individual section#baiat .despre-participant {
+        top: 400px;
+    }
+    .individual section .despre-participant > h1 {
+        font-size: 40px;
+    }
+    .individual section .despre-participant > p {
+        width: 350px;
+        font-size: 20px;
+    }
+
+    .votare header > h1 {
+        font-size: 60px;
+    }
+    .votare header > p {
+        margin-top: 20px;
+        font-size: 14px;
+        width: 90%;
+        color: #A8ACA9;
+    }
+    .votare .redirecturi {
+        margin-top: 40px;
+        margin-left: 10px;
+        display: flex;
+    }
+    .votare .redirecturi a div {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        display: grid;
+        place-items: center;
+        transition: .1s ease-in-out;
+    }
+    .votare .redirecturi a div:hover {
+        transform: scale(1.1);
+    }
+    .votare .redirecturi a div::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(img/mrpop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .votare .redirecturi a:last-of-type div::before {
+        background-image: url(img/misspop.png);
+        top: -6px;
+        /* right: -6px; */
+    }
+    .votare .redirecturi a:first-of-type div::before {
+        left: 16px;
+        height: 165px;
+    }
+
+    footer > p {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+    body {
+        background-attachment: fixed;
+    }
+
+    nav {
+        top: 56px;
+    }
+
+    header {
+        height: 600px;
+    }
+    header .titlu {
+        width: 70%;
+    }
+    header .draperii {
+        width: 25%;
+    }
+    header > h2 {
+        top: 360px;
+        font-size: 24px;
+        -webkit-text-stroke-width: 0.3px;
+    }
+    header > p {
+        top: 420px;
+        font-size: 36px;
+    }
+    header > .countdown {
+        top: 480px;
+        gap: 35px;
+    }
+    header > .countdown > div {
+        gap: 5px;
+    }
+    header > .countdown > div > div {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        border-radius: 8px;
+    }
+    header > .countdown > div > span {
+        margin-left: 10px;
+        font-size: 28px;
+    }
+    header > span {
+        font-size: 16px;
+    }
+
+    .votare header {
+        height: 1000px;
+    }
+    .votare header > p {
+        display: none;
+    }
+
+    section#echipe {
+        background-size: contain;
+        object-fit: contain;
+    }
+    section#echipe > h1 {
+        width: 620px;
+        font-size: 60px;
+    }
+    section#echipe > p {
+        width: 620px;
+        font-size: 18px;
+    }
+    section#echipe > p > span {
+        font-size: 18px;
+    }
+    section#echipe .grid-echipe {
+        width: 620px;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    section#sponsori > h1 {
+        width: 620px;
+        font-size: 60px;
+    }
+    section#sponsori > p {
+        width: 616px;
+        font-size: 18px;
+    }
+    section#sponsori .grid-sponsori {
+        width: 616px;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 40px 40px;
+    }
+
+    section#bilete {
+        height: 500px;
+        background-size: cover;
+        background-position: bottom 0% left 90%;
+    }
+    section#bilete > h1 {
+        width: 620px;
+        font-size: 60px;
+    }
+    section#bilete > p {
+        width: 608px;
+        font-size: 26px;
+    }
+
+    section#tombola {
+        padding-top: 82px;
+        height: 400px;
+        background-size: cover;
+        background-position: bottom 0% left 78%;
+    }
+    section#tombola > h1 {
+        width: 620px;
+        font-size: 60px;
+    }
+    section#tombola > p {
+        width: 620px;
+        font-size: 26px;
+    }
+
+    .individual > section {
+        position: relative;
+        width: 100%;
+        height: 1180px;
+        background-size: 100% 100%;
+    }
+    .individual > section#fata {
+        height: 950px;
+    }
+    .individual section .despre-participant {
+        top: 200px;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        flex-direction: column;
+    }
+    .individual section#baiat .despre-participant {
+        top: 520px;
+    }
+    .individual section#fata .despre-participant {
+        top: 320px;
+    }
+    .individual section .despre-participant > h1 {
+        font-size: 90px;
+    }
+    .individual section .despre-participant > p {
+        width: 650px;
+        font-size: 30px;
+    }
+
+    
+    footer > p {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+}
